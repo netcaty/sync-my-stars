@@ -356,7 +356,7 @@ class SyncManager:
             log(f"✗ 创建 Codeberg 仓库时出错: {e}")
             return False
     
-    def sync_repository_simple_smart(self, repo_info: Dict) -> bool:
+    def sync_repository(self, repo_info: Dict) -> bool:
         """简单智能方案"""
         repo_full_name = repo_info['full_name']
         original_name = repo_info['name']
