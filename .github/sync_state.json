@@ -343,12 +343,6 @@
       "last_synced": "2026-01-19T11:24:56.885717",
       "operation": "cloned"
     },
-    "programthink/books": {
-      "name": "books",
-      "last_updated": "2026-01-19T11:31:50Z",
-      "last_synced": "2026-01-19T17:42:55.292413",
-      "operation": "cloned"
-    },
     "CodeHubApp/CodeHub": {
       "name": "CodeHub",
       "last_updated": "2026-01-19T02:25:06Z",
@@ -432,13 +426,6 @@
       "name": "Foundations-of-LLMs",
       "last_updated": "2026-01-19T17:34:43Z",
       "last_synced": "2026-01-19T17:41:29.836243",
-      "operation": "cloned"
-    },
-    "AniruddhaChattopadhyay/Books": {
-      "name": "Books",
-      "codeberg_name": "Books",
-      "last_updated": "2026-01-19T17:35:10Z",
-      "last_synced": "2026-01-19T19:43:19.994500",
       "operation": "cloned"
     }
   }
