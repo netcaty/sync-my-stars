@@ -57,7 +57,7 @@ def log(message: str):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{timestamp}] {simple_sanitize(message)}")
 
-def run_command(cmd: List[str], cwd: Optional[Path] = None) -> Tuple[bool, str]:
+def run_command(cmd: List[str], cwd: Optional[Path] = None, ignore_errors: bool = False) -> Tuple[bool, str]:
     """执行 shell 命令并返回结果"""
     try:
         result = subprocess.run(
@@ -67,7 +67,7 @@ def run_command(cmd: List[str], cwd: Optional[Path] = None) -> Tuple[bool, str]:
             text=True,
             timeout=300
         )
-        if result.returncode != 0:
+        if result.returncode != 0 and not ignore_errors:
             return False, f"{result.stderr}"
         return True, result.stdout.strip()
     except subprocess.TimeoutExpired:
