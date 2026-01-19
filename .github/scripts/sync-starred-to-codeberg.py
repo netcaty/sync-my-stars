@@ -356,104 +356,85 @@ class SyncManager:
             log(f"✗ 创建 Codeberg 仓库时出错: {e}")
             return False
     
-    def sync_repository(self, repo_info: Dict) -> bool:
-        """同步单个仓库"""
-        repo_full_name = repo_info.get('full_name')
-        repo_name = repo_info.get('name')
+    def sync_repository_simple_smart(self, repo_info: Dict) -> bool:
+        """简单智能方案"""
+        repo_full_name = repo_info['full_name']
+        original_name = repo_info['name']
         
-        if not repo_full_name or not repo_name:
-            log(f"错误: 仓库信息不完整: {repo_info}")
-            return False
-        
-        repo_path = self.repos_dir / repo_name
+        # 本地目录使用原始名称
+        repo_path = self.repos_dir / original_name
         
         try:
-            operation = "updated"
-            
             # 克隆或更新
             if repo_path.exists():
-                # 增量更新
-                log(f"  更新现有仓库...")
-                success, output = run_command(['git', 'fetch', '--all'], cwd=repo_path)
-                if not success:
-                    log(f"  更新失败: {output[:200]}")
-                    return False
+                run_command(['git', 'fetch', '--all'], cwd=repo_path)
+                operation = "updated"
             else:
-                # 完整克隆
-                log(f"  克隆新仓库...")
-                # 使用 GitHub token 进行认证
                 clone_url = f"https://{self.github_token}@github.com/{repo_full_name}.git"
-                success, output = run_command(['git', 'clone', '--mirror', clone_url, str(repo_path)])
-                if not success:
-                    log(f"  克隆失败: {output[:200]}")
-                    return False
+                run_command(['git', 'clone', '--mirror', clone_url, str(repo_path)])
                 operation = "cloned"
             
-            # 确保 Codeberg 仓库存在
-            if not self.codeberg_repo_exists(repo_name):
-                if not self.create_codeberg_repo(repo_name, repo_info.get('description', '')):
+            # 确定Codeberg仓库名
+            if repo_full_name in self.state:
+                # 使用历史记录的名称
+                codeberg_name = self.state[repo_full_name].get('codeberg_name', original_name)
+                log(f"  使用历史Codeberg名称: {codeberg_name}")
+            else:
+                # 首次尝试使用原始名称
+                codeberg_name = original_name
+                log(f"  首次尝试原始名称: {codeberg_name}")
+            
+            # 设置远程
+            codeberg_url = f"https://{self.codeberg_username}:{self.codeberg_token}@codeberg.org/{self.codeberg_username}/{codeberg_name}.git"
+            run_command(['git', 'remote', 'remove', 'codeberg'], cwd=repo_path, ignore_errors=True)
+            run_command(['git', 'remote', 'add', 'codeberg', codeberg_url], cwd=repo_path)
+            
+            # 检查仓库是否存在
+            if self.codeberg_repo_exists(codeberg_name):
+                # 尝试非强制推送
+                success, output = run_command(['git', 'push', 'codeberg', '--all'], cwd=repo_path)
+                
+                if not success and 'non-fast-forward' in output:
+                    # 不是同一个仓库，需要新名称
+                    log(f"  仓库冲突，生成新名称")
+                    
+                    # 使用用户名-仓库名格式
+                    owner = repo_full_name.split('/')[0]
+                    codeberg_name = f"{owner}-{original_name}"
+                    
+                    # 更新远程
+                    codeberg_url = f"https://{self.codeberg_username}:{self.codeberg_token}@codeberg.org/{self.codeberg_username}/{codeberg_name}.git"
+                    run_command(['git', 'remote', 'set-url', 'codeberg', codeberg_url], cwd=repo_path)
+                    
+                    # 创建新仓库并推送
+                    if self.create_codeberg_repo(codeberg_name):
+                        run_command(['git', 'push', 'codeberg', '--all', '--force'], cwd=repo_path)
+                    else:
+                        return False
+            else:
+                # 创建新仓库
+                if self.create_codeberg_repo(codeberg_name):
+                    run_command(['git', 'push', 'codeberg', '--all', '--force'], cwd=repo_path)
+                else:
                     return False
             
-            # 推送到 Codeberg
-            log(f"  推送到 Codeberg...")
-            codeberg_url = f"https://{self.codeberg_username}:{self.codeberg_token}@codeberg.org/{self.codeberg_username}/{repo_name}.git"
+            # 推送标签
+            run_command(['git', 'push', 'codeberg', '--tags', '--force'], cwd=repo_path)
             
-            # 设置或更新远程
-            success, output = run_command(['git', 'remote'], cwd=repo_path)
-            if success:
-                if 'codeberg' not in output:
-                    # 添加远程
-                    success, output = run_command(['git', 'remote', 'add', 'codeberg', codeberg_url], cwd=repo_path)
-                else:
-                    # 更新远程 URL
-                    success, output = run_command(['git', 'remote', 'set-url', 'codeberg', codeberg_url], cwd=repo_path)
-            
-            if not success:
-                log(f"  设置远程失败: {output[:200]}")
-                return False
-            
-            
-            # 修复：使用专门的推送脚本
-            log(f"  推送到 Codeberg...")
-            push_script = f"""
-            #!/bin/bash
-            cd {repo_path}
-            # 推送所有分支（排除 pull request 等特殊引用）
-            git push codeberg --all --force
-            # 推送所有标签
-            git push codeberg --tags --force
-            """
-            
-            # 执行推送脚本
-            push_result = subprocess.run(
-                ['bash', '-c', push_script],
-                capture_output=True,
-                text=True
-            )
-            
-            if push_result.returncode != 0:
-                # 检查输出，如果是预期的错误则继续
-                if 'refs/pull/' in push_result.stderr:
-                    log(f"  推送完成（忽略 pull request 引用错误）")
-                else:
-                    log(f"  推送失败: {push_result.stderr[:300]}")
-                    return False
-
-            # 更新状态记录
+            # 更新状态
             self.state[repo_full_name] = {
-                'name': repo_name,
-                'last_updated': repo_info.get('updated_at', ''),
+                'name': original_name,
+                'codeberg_name': codeberg_name,
+                'last_updated': repo_info['updated_at'],
                 'last_synced': datetime.now().isoformat(),
                 'operation': operation
             }
             
-            log(f"✓ 同步完成: {repo_name}")
+            log(f"✓ 同步完成，Codeberg仓库: {codeberg_name}")
             return True
             
         except Exception as e:
-            log(f"✗ 同步出错: {str(e)[:200]}")
-            import traceback
-            traceback.print_exc()
+            log(f"✗ 同步出错: {e}")
             return False
     
     def cleanup_old_repos(self, current_repos: List[Dict]):
