@@ -14,10 +14,48 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
 
+def simple_sanitize(text: str) -> str:
+    """简单的URL脱敏函数"""
+    import re
+    
+    def replace_token(match):
+        url = match.group(0)
+        
+        # 检查是否有冒号（username:token格式）
+        if '://' in url:
+            # 提取协议后面的部分
+            parts = url.split('://', 1)
+            protocol = parts[0]
+            rest = parts[1]
+            
+            # 找到@符号的位置
+            at_pos = rest.find('@')
+            if at_pos != -1:
+                # 获取@前面的凭证部分
+                credentials = rest[:at_pos]
+                
+                # 检查是否有冒号分隔用户名和token
+                if ':' in credentials:
+                    # username:token格式
+                    username = credentials.split(':')[0]
+                    rest = f"{username}:***{rest[at_pos:]}"
+                else:
+                    # 只有token格式
+                    rest = f"***{rest[at_pos:]}"
+                
+                return f"{protocol}://{rest}"
+        
+        return url
+    
+    # 匹配包含@的URL
+    pattern = r'https?://[^\s]+@[^\s]+'
+    return re.sub(pattern, replace_token, text)
+
+
 def log(message: str):
     """简单的日志函数"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"[{timestamp}] {message}")
+    print(f"[{timestamp}] {simple_sanitize(message)}")
 
 def run_command(cmd: List[str], cwd: Optional[Path] = None) -> Tuple[bool, str]:
     """执行 shell 命令并返回结果"""
