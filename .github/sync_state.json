@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-01-19T20:51:40.216808",
+    "last_updated": "2026-01-19T21:15:53.286907",
     "total_repos": 70,
-    "version": "1.0"
+    "renamed_repos": 1
   },
   "repositories": {
     "NanmiCoder/MediaCrawler": {
@@ -21,9 +21,11 @@
     },
     "garethgeorge/backrest": {
       "name": "backrest",
-      "last_updated": "2026-01-19T14:49:26Z",
-      "last_synced": "2026-01-19T17:37:11.150966",
-      "operation": "cloned"
+      "codeberg_name": "backrest",
+      "last_updated": "2026-01-19T21:12:51Z",
+      "last_synced": "2026-01-19T21:15:26.806122",
+      "operation": "cloned",
+      "renamed": false
     },
     "netcaty/ctrl-q": {
       "name": "ctrl-q",
@@ -54,9 +56,10 @@
     "fffaraz/awesome-cpp": {
       "name": "awesome-cpp",
       "codeberg_name": "awesome-cpp",
-      "last_updated": "2026-01-19T19:41:25Z",
-      "last_synced": "2026-01-19T19:43:07.144455",
-      "operation": "cloned"
+      "last_updated": "2026-01-19T20:57:14Z",
+      "last_synced": "2026-01-19T21:15:49.259114",
+      "operation": "cloned",
+      "renamed": false
     },
     "ethen8181/machine-learning": {
       "name": "machine-learning",
@@ -124,9 +127,10 @@
     "codecrafters-io/build-your-own-x": {
       "name": "build-your-own-x",
       "codeberg_name": "build-your-own-x",
-      "last_updated": "2026-01-19T20:41:40Z",
-      "last_synced": "2026-01-19T20:51:01.730774",
-      "operation": "cloned"
+      "last_updated": "2026-01-19T21:13:58Z",
+      "last_synced": "2026-01-19T21:15:38.246830",
+      "operation": "cloned",
+      "renamed": false
     },
     "netkiller/shell": {
       "name": "shell",
@@ -167,9 +171,10 @@
     "donnemartin/system-design-primer": {
       "name": "system-design-primer",
       "codeberg_name": "system-design-primer",
-      "last_updated": "2026-01-19T20:49:17Z",
-      "last_synced": "2026-01-19T20:51:19.650047",
-      "operation": "cloned"
+      "last_updated": "2026-01-19T20:54:00Z",
+      "last_synced": "2026-01-19T21:15:32.054053",
+      "operation": "cloned",
+      "renamed": false
     },
     "MikeWang000000/Natter": {
       "name": "Natter",
@@ -269,9 +274,10 @@
     "practical-tutorials/project-based-learning": {
       "name": "project-based-learning",
       "codeberg_name": "project-based-learning",
-      "last_updated": "2026-01-19T20:49:59Z",
-      "last_synced": "2026-01-19T20:51:33.275198",
-      "operation": "cloned"
+      "last_updated": "2026-01-19T21:14:09Z",
+      "last_synced": "2026-01-19T21:15:34.975748",
+      "operation": "cloned",
+      "renamed": false
     },
     "overnote/over-server": {
       "name": "over-server",
@@ -324,9 +330,10 @@
     "prakhar1989/awesome-courses": {
       "name": "awesome-courses",
       "codeberg_name": "awesome-courses",
-      "last_updated": "2026-01-19T17:51:04Z",
-      "last_synced": "2026-01-19T19:15:34.866290",
-      "operation": "cloned"
+      "last_updated": "2026-01-19T21:08:13Z",
+      "last_synced": "2026-01-19T21:15:52.284805",
+      "operation": "cloned",
+      "renamed": false
     },
     "it-ebooks-0/geektime-books": {
       "name": "geektime-books",
@@ -430,6 +437,22 @@
       "last_updated": "2026-01-19T17:34:43Z",
       "last_synced": "2026-01-19T17:41:29.836243",
       "operation": "cloned"
+    },
+    "AniruddhaChattopadhyay/Books": {
+      "name": "Books",
+      "codeberg_name": "Books",
+      "last_updated": "2026-01-19T17:35:10Z",
+      "last_synced": "2026-01-19T21:15:23.205782",
+      "operation": "cloned",
+      "renamed": false
+    },
+    "programthink/books": {
+      "name": "books",
+      "codeberg_name": "programthink-books",
+      "last_updated": "2026-01-19T11:31:50Z",
+      "last_synced": "2026-01-19T21:15:45.340470",
+      "operation": "cloned",
+      "renamed": true
     }
   }
 }
