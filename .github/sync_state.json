@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-01-19T19:40:47.340314",
+    "last_updated": "2026-01-19T19:43:27.010755",
     "total_repos": 70,
     "version": "1.0"
   },
@@ -47,15 +47,15 @@
     "schollz/croc": {
       "name": "croc",
       "codeberg_name": "croc",
-      "last_updated": "2026-01-19T18:42:46Z",
-      "last_synced": "2026-01-19T19:14:39.841480",
+      "last_updated": "2026-01-19T19:41:18Z",
+      "last_synced": "2026-01-19T19:43:03.307794",
       "operation": "cloned"
     },
     "fffaraz/awesome-cpp": {
       "name": "awesome-cpp",
       "codeberg_name": "awesome-cpp",
-      "last_updated": "2026-01-19T19:26:28Z",
-      "last_synced": "2026-01-19T19:27:14.946112",
+      "last_updated": "2026-01-19T19:41:25Z",
+      "last_synced": "2026-01-19T19:43:07.144455",
       "operation": "cloned"
     },
     "ethen8181/machine-learning": {
@@ -123,8 +123,8 @@
     "codecrafters-io/build-your-own-x": {
       "name": "build-your-own-x",
       "codeberg_name": "build-your-own-x",
-      "last_updated": "2026-01-19T19:35:52Z",
-      "last_synced": "2026-01-19T19:40:28.489265",
+      "last_updated": "2026-01-19T19:41:35Z",
+      "last_synced": "2026-01-19T19:43:15.212342",
       "operation": "cloned"
     },
     "netkiller/shell": {
@@ -166,8 +166,8 @@
     "donnemartin/system-design-primer": {
       "name": "system-design-primer",
       "codeberg_name": "system-design-primer",
-      "last_updated": "2026-01-19T19:33:06Z",
-      "last_synced": "2026-01-19T19:40:40.924077",
+      "last_updated": "2026-01-19T19:42:25Z",
+      "last_synced": "2026-01-19T19:43:25.007956",
       "operation": "cloned"
     },
     "MikeWang000000/Natter": {
@@ -424,14 +424,21 @@
     "ossu/computer-science": {
       "name": "computer-science",
       "codeberg_name": "computer-science",
-      "last_updated": "2026-01-19T19:08:05Z",
-      "last_synced": "2026-01-19T19:14:52.601311",
+      "last_updated": "2026-01-19T19:42:33Z",
+      "last_synced": "2026-01-19T19:43:11.697072",
       "operation": "cloned"
     },
     "ZJU-LLMs/Foundations-of-LLMs": {
       "name": "Foundations-of-LLMs",
       "last_updated": "2026-01-19T17:34:43Z",
       "last_synced": "2026-01-19T17:41:29.836243",
+      "operation": "cloned"
+    },
+    "AniruddhaChattopadhyay/Books": {
+      "name": "Books",
+      "codeberg_name": "Books",
+      "last_updated": "2026-01-19T17:35:10Z",
+      "last_synced": "2026-01-19T19:43:19.994500",
       "operation": "cloned"
     }
   }
