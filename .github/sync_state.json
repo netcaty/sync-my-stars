@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-01-19T19:15:36.868662",
+    "last_updated": "2026-01-19T19:21:02.149657",
     "total_repos": 70,
     "version": "1.0"
   },
@@ -67,8 +67,8 @@
     "ellisonleao/magictools": {
       "name": "magictools",
       "codeberg_name": "magictools",
-      "last_updated": "2026-01-19T19:10:03Z",
-      "last_synced": "2026-01-19T19:14:47.747881",
+      "last_updated": "2026-01-19T19:20:16Z",
+      "last_synced": "2026-01-19T19:20:50.021679",
       "operation": "cloned"
     },
     "psviderski/uncloud": {
@@ -166,8 +166,8 @@
     "donnemartin/system-design-primer": {
       "name": "system-design-primer",
       "codeberg_name": "system-design-primer",
-      "last_updated": "2026-01-19T19:07:24Z",
-      "last_synced": "2026-01-19T19:15:15.689340",
+      "last_updated": "2026-01-19T19:15:07Z",
+      "last_synced": "2026-01-19T19:21:00.148651",
       "operation": "cloned"
     },
     "MikeWang000000/Natter": {
@@ -436,8 +436,9 @@
     },
     "AniruddhaChattopadhyay/Books": {
       "name": "Books",
-      "last_updated": "2026-01-18T17:35:10Z",
-      "last_synced": "2026-01-19T17:42:05.207553",
+      "codeberg_name": "Books",
+      "last_updated": "2026-01-19T17:35:10Z",
+      "last_synced": "2026-01-19T19:20:54.869901",
       "operation": "cloned"
     }
   }
