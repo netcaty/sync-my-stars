@@ -218,7 +218,7 @@ class SyncManager:
                             'name': repo_data.get('name'),
                             'updated_at': repo_data.get('updated_at'),
                             'clone_url': repo_data.get('clone_url'),
-                            'description': (repo_data.get('description', '')[:100] if repo_data.get('description') else '') + f"\nMirror of {repo_data.get('html_url')}"
+                            'description': (repo_data.get('description', '')[:100] if repo_data.get('description') else '') + f"(Mirror of {repo_data.get('html_url')})"
                         }
                         
                         # 检查必需字段是否存在
