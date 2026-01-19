@@ -393,6 +393,7 @@ class SyncManager:
             if self.codeberg_repo_exists(codeberg_name):
                 # 尝试非强制推送
                 success, output = run_command(['git', 'push', 'codeberg', '--all'], cwd=repo_path)
+                log(f"git push --all : {output}")
                 
                 if not success and 'non-fast-forward' in output:
                     # 不是同一个仓库，需要新名称
