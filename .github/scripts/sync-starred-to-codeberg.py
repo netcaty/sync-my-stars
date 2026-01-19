@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 同步 GitHub starred 仓库到 Codeberg
-状态文件保存在 .github/sync_state.json
+修复 NoneType 错误和权限问题
 """
 
 import os
@@ -13,7 +13,6 @@ import time
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
-import hashlib
 
 def log(message: str):
     """简单的日志函数"""
@@ -49,6 +48,7 @@ class SyncManager:
         # 验证配置
         if not self.github_token:
             log("错误: 缺少 GITHUB_TOKEN 环境变量")
+            log("请确保使用个人访问令牌 (PAT) 而不是默认的 GITHUB_TOKEN")
             sys.exit(1)
         if not self.codeberg_username:
             log("错误: 缺少 CODEBERG_USERNAME 环境变量")
@@ -57,7 +57,7 @@ class SyncManager:
             log("错误: 缺少 CODEBERG_TOKEN 环境变量")
             sys.exit(1)
         
-        # API 配置
+        # API 配置 - 使用个人访问令牌
         self.github_headers = {
             'Authorization': f'token {self.github_token}',
             'Accept': 'application/vnd.github.v3+json'
@@ -68,12 +68,12 @@ class SyncManager:
             'Content-Type': 'application/json'
         }
         
-        # 工作目录（GitHub Actions 工作区）
+        # 工作目录
         self.workspace = Path('.')
         
-        # 状态文件路径（保存在项目根目录的 .github 文件夹中）
+        # 状态文件路径
         self.state_file = self.workspace / '.github' / 'sync_state.json'
-        self.state_file.parent.mkdir(exist_ok=True)  # 确保目录存在
+        self.state_file.parent.mkdir(exist_ok=True)
         
         # 临时存储仓库的目录
         self.repos_dir = Path('/tmp/github-backup/repos')
@@ -91,6 +91,32 @@ class SyncManager:
             'failed': 0,
             'start_time': datetime.now()
         }
+        
+        # 测试 GitHub API 连接
+        self.test_github_connection()
+    
+    def test_github_connection(self):
+        """测试 GitHub API 连接和权限"""
+        log("测试 GitHub API 连接...")
+        try:
+            # 测试获取用户信息
+            response = requests.get(
+                'https://api.github.com/user',
+                headers=self.github_headers,
+                timeout=10
+            )
+            
+            if response.status_code == 200:
+                user_info = response.json()
+                log(f"✓ 连接成功，用户: {user_info.get('login')}")
+            else:
+                log(f"✗ 连接失败: {response.status_code}")
+                log(f"错误信息: {response.text}")
+                sys.exit(1)
+                
+        except Exception as e:
+            log(f"✗ 连接测试失败: {e}")
+            sys.exit(1)
     
     def load_state(self) -> Dict:
         """从项目根目录加载状态文件"""
@@ -98,8 +124,14 @@ class SyncManager:
             try:
                 with open(self.state_file, 'r') as f:
                     state_data = json.load(f)
-                    log(f"从 {self.state_file} 加载状态，包含 {len(state_data)} 个仓库记录")
-                    return state_data
+                    # 兼容新旧格式
+                    if 'repositories' in state_data:
+                        repos = state_data['repositories']
+                    else:
+                        repos = state_data
+                    
+                    log(f"从 {self.state_file} 加载状态，包含 {len(repos)} 个仓库记录")
+                    return repos
             except json.JSONDecodeError as e:
                 log(f"警告: 状态文件格式错误，创建新的: {e}")
                 return {}
@@ -117,8 +149,8 @@ class SyncManager:
             data_to_save = {
                 'metadata': {
                     'last_updated': datetime.now().isoformat(),
-                    'github_user': self.get_github_username(),
-                    'total_repos': len(self.state)
+                    'total_repos': len(self.state),
+                    'version': '1.0'
                 },
                 'repositories': self.state
             }
@@ -139,24 +171,11 @@ class SyncManager:
             except Exception as e2:
                 log(f"保存简化版本也失败: {e2}")
     
-    def get_github_username(self) -> str:
-        """获取 GitHub 用户名"""
-        try:
-            response = requests.get(
-                'https://api.github.com/user',
-                headers=self.github_headers
-            )
-            if response.status_code == 200:
-                return response.json().get('login', 'unknown')
-        except Exception:
-            pass
-        return 'unknown'
-    
     def get_starred_repos(self) -> List[Dict]:
         """获取所有 starred 仓库（处理分页）"""
         repos = []
         page = 1
-        per_page = 100  # GitHub API 每页最大数量
+        per_page = 30  # 降低每页数量避免请求过大
         
         log("获取 GitHub starred 仓库列表...")
         
@@ -166,8 +185,7 @@ class SyncManager:
                 params = {
                     'page': page,
                     'per_page': per_page,
-                    'sort': 'updated',
-                    'direction': 'desc'
+                    'sort': 'updated'
                 }
                 
                 response = requests.get(
@@ -179,7 +197,8 @@ class SyncManager:
                 
                 if response.status_code != 200:
                     log(f"获取 starred 仓库失败: {response.status_code}")
-                    log(f"响应: {response.text[:200]}")
+                    log(f"响应: {response.text}")
+                    log("请确保使用的令牌具有 'user' 范围的 'read:user' 权限")
                     break
                 
                 page_repos = response.json()
@@ -187,15 +206,32 @@ class SyncManager:
                     break
                 
                 for repo_data in page_repos:
-                    repos.append({
-                        'full_name': repo_data['full_name'],
-                        'name': repo_data['name'],
-                        'description': repo_data.get('description', '')[:200],
-                        'updated_at': repo_data['updated_at'],
-                        'clone_url': repo_data['clone_url'],
-                        'size': repo_data.get('size', 0),
-                        'language': repo_data.get('language', 'Unknown')
-                    })
+                    # 修复：检查 repo_data 是否为 None
+                    if repo_data is None:
+                        log("警告: 跳过 None 仓库数据")
+                        continue
+                    
+                    try:
+                        # 修复：使用安全的字典访问方式
+                        repo_info = {
+                            'full_name': repo_data.get('full_name'),
+                            'name': repo_data.get('name'),
+                            'updated_at': repo_data.get('updated_at'),
+                            'clone_url': repo_data.get('clone_url'),
+                            'description': repo_data.get('description', '')[:100] if repo_data.get('description') else ''
+                        }
+                        
+                        # 检查必需字段是否存在
+                        if not repo_info['full_name'] or not repo_info['name']:
+                            log(f"警告: 跳过无效仓库数据: {repo_data}")
+                            continue
+                            
+                        repos.append(repo_info)
+                        
+                    except Exception as e:
+                        log(f"警告: 处理仓库数据时出错，跳过: {e}")
+                        log(f"问题数据: {repo_data}")
+                        continue
                 
                 log(f"已获取第 {page} 页，共 {len(repos)} 个仓库")
                 
@@ -205,13 +241,15 @@ class SyncManager:
                     break
                     
                 page += 1
-                time.sleep(0.5)  # 避免速率限制
+                time.sleep(1)  # 避免速率限制
                 
             except requests.exceptions.RequestException as e:
                 log(f"网络请求失败: {e}")
                 break
             except Exception as e:
                 log(f"处理仓库数据时出错: {e}")
+                import traceback
+                traceback.print_exc()
                 break
         
         log(f"总共获取到 {len(repos)} 个 starred 仓库")
@@ -219,12 +257,14 @@ class SyncManager:
     
     def should_sync_repo(self, repo_info: Dict) -> bool:
         """判断是否需要同步仓库"""
-        # 如果是强制完整同步，则总是同步
         if self.full_sync:
             return True
         
-        repo_full_name = repo_info['full_name']
-        repo_updated = repo_info['updated_at']
+        repo_full_name = repo_info.get('full_name')
+        repo_updated = repo_info.get('updated_at')
+        
+        if not repo_full_name or not repo_updated:
+            return True
         
         # 检查状态文件中是否有记录
         if repo_full_name in self.state:
@@ -247,18 +287,14 @@ class SyncManager:
             log(f"检查 Codeberg 仓库失败: {e}")
             return False
     
-    def create_codeberg_repo(self, repo_info: Dict) -> bool:
+    def create_codeberg_repo(self, repo_name: str, description: str = "") -> bool:
         """在 Codeberg 上创建仓库"""
-        repo_name = repo_info['name']
-        description = repo_info['description'] or f"Mirror of {repo_info['full_name']}"
-        
         try:
             url = f"https://codeberg.org/api/v1/user/repos"
             data = {
                 'name': repo_name,
-                'description': description[:255],
-                'private': False,
-                'auto_init': False
+                'description': description[:255] if description else f"GitHub mirror",
+                'private': False
             }
             
             response = requests.post(
@@ -282,38 +318,43 @@ class SyncManager:
             log(f"✗ 创建 Codeberg 仓库时出错: {e}")
             return False
     
-    def sync_repository(self, repo_info: Dict) -> Tuple[bool, str]:
+    def sync_repository(self, repo_info: Dict) -> bool:
         """同步单个仓库"""
-        repo_full_name = repo_info['full_name']
-        repo_name = repo_info['name']
+        repo_full_name = repo_info.get('full_name')
+        repo_name = repo_info.get('name')
+        
+        if not repo_full_name or not repo_name:
+            log(f"错误: 仓库信息不完整: {repo_info}")
+            return False
+        
         repo_path = self.repos_dir / repo_name
         
         try:
             operation = "updated"
             
             # 克隆或更新
-            if repo_path.exists() and (repo_path / 'config').exists():
+            if repo_path.exists():
                 # 增量更新
-                log(f"  增量更新仓库...")
-                success, output = run_command(['git', 'fetch', '--all', '--prune'], cwd=repo_path)
+                log(f"  更新现有仓库...")
+                success, output = run_command(['git', 'fetch', '--all'], cwd=repo_path)
                 if not success:
                     log(f"  更新失败: {output[:200]}")
-                    return False, "fetch_failed"
+                    return False
             else:
                 # 完整克隆
                 log(f"  克隆新仓库...")
                 # 使用 GitHub token 进行认证
-                auth_clone_url = f"https://{self.github_token}@github.com/{repo_full_name}.git"
-                success, output = run_command(['git', 'clone', '--mirror', auth_clone_url, str(repo_path)])
+                clone_url = f"https://{self.github_token}@github.com/{repo_full_name}.git"
+                success, output = run_command(['git', 'clone', '--mirror', clone_url, str(repo_path)])
                 if not success:
                     log(f"  克隆失败: {output[:200]}")
-                    return False, "clone_failed"
+                    return False
                 operation = "cloned"
             
             # 确保 Codeberg 仓库存在
             if not self.codeberg_repo_exists(repo_name):
-                if not self.create_codeberg_repo(repo_info):
-                    return False, "create_codeberg_failed"
+                if not self.create_codeberg_repo(repo_name, repo_info.get('description', '')):
+                    return False
             
             # 推送到 Codeberg
             log(f"  推送到 Codeberg...")
@@ -331,34 +372,34 @@ class SyncManager:
             
             if not success:
                 log(f"  设置远程失败: {output[:200]}")
-                return False, "remote_setup_failed"
+                return False
             
             # 推送所有分支和标签
             success, output = run_command(['git', 'push', '--mirror', 'codeberg'], cwd=repo_path)
             if not success:
                 log(f"  推送失败: {output[:200]}")
-                return False, "push_failed"
+                return False
             
             # 更新状态记录
             self.state[repo_full_name] = {
                 'name': repo_name,
-                'last_updated': repo_info['updated_at'],
+                'last_updated': repo_info.get('updated_at', ''),
                 'last_synced': datetime.now().isoformat(),
-                'operation': operation,
-                'size_mb': repo_info.get('size', 0),
-                'language': repo_info.get('language', 'Unknown')
+                'operation': operation
             }
             
             log(f"✓ 同步完成: {repo_name}")
-            return True, operation
+            return True
             
         except Exception as e:
             log(f"✗ 同步出错: {str(e)[:200]}")
-            return False, "exception"
+            import traceback
+            traceback.print_exc()
+            return False
     
     def cleanup_old_repos(self, current_repos: List[Dict]):
         """清理已取消 star 的仓库状态"""
-        current_names = {repo['full_name'] for repo in current_repos}
+        current_names = {repo.get('full_name') for repo in current_repos if repo.get('full_name')}
         removed_count = 0
         
         for repo_name in list(self.state.keys()):
@@ -374,7 +415,6 @@ class SyncManager:
         log("=" * 60)
         log("开始同步 starred 仓库到 Codeberg")
         log("状态文件: .github/sync_state.json")
-        log(f"临时目录: {self.repos_dir}")
         log("=" * 60)
         
         # 获取仓库列表
@@ -393,7 +433,12 @@ class SyncManager:
         
         # 同步每个仓库
         for i, repo in enumerate(repos, 1):
-            repo_full_name = repo['full_name']
+            repo_full_name = repo.get('full_name')
+            
+            if not repo_full_name:
+                log(f"[{i}/{len(repos)}] 错误: 仓库信息不完整，跳过")
+                self.stats['failed'] += 1
+                continue
             
             log(f"[{i}/{len(repos)}] 处理: {repo_full_name}")
             
@@ -404,23 +449,22 @@ class SyncManager:
                 continue
             
             # 执行同步
-            success, operation = self.sync_repository(repo)
-            
-            if success:
-                if operation == "cloned":
+            if self.sync_repository(repo):
+                repo_state = self.state.get(repo_full_name, {})
+                if repo_state.get('operation') == 'cloned':
                     self.stats['new'] += 1
                 else:
                     self.stats['updated'] += 1
             else:
                 self.stats['failed'] += 1
             
-            # 每处理 3 个仓库保存一次状态（防止中途失败丢失所有进度）
-            if i % 3 == 0:
+            # 每处理 5 个仓库保存一次状态
+            if i % 5 == 0:
                 log("保存中间状态...")
                 self.save_state()
             
             # 添加延迟避免速率限制
-            time.sleep(1.5)
+            time.sleep(2)
         
         # 最终保存状态
         self.save_state()
