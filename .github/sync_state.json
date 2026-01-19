@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-01-19T19:21:02.149657",
+    "last_updated": "2026-01-19T19:27:37.425547",
     "total_repos": 70,
     "version": "1.0"
   },
@@ -8,8 +8,8 @@
     "NanmiCoder/MediaCrawler": {
       "name": "MediaCrawler",
       "codeberg_name": "MediaCrawler",
-      "last_updated": "2026-01-19T18:34:00Z",
-      "last_synced": "2026-01-19T19:14:21.279093",
+      "last_updated": "2026-01-19T19:22:08Z",
+      "last_synced": "2026-01-19T19:27:11.041347",
       "operation": "cloned"
     },
     "janeczku/calibre-web": {
@@ -54,8 +54,8 @@
     "fffaraz/awesome-cpp": {
       "name": "awesome-cpp",
       "codeberg_name": "awesome-cpp",
-      "last_updated": "2026-01-19T18:48:33Z",
-      "last_synced": "2026-01-19T19:14:44.011046",
+      "last_updated": "2026-01-19T19:26:28Z",
+      "last_synced": "2026-01-19T19:27:14.946112",
       "operation": "cloned"
     },
     "ethen8181/machine-learning": {
@@ -67,8 +67,8 @@
     "ellisonleao/magictools": {
       "name": "magictools",
       "codeberg_name": "magictools",
-      "last_updated": "2026-01-19T19:20:16Z",
-      "last_synced": "2026-01-19T19:20:50.021679",
+      "last_updated": "2026-01-19T19:21:21Z",
+      "last_synced": "2026-01-19T19:27:18.413720",
       "operation": "cloned"
     },
     "psviderski/uncloud": {
@@ -123,8 +123,8 @@
     "codecrafters-io/build-your-own-x": {
       "name": "build-your-own-x",
       "codeberg_name": "build-your-own-x",
-      "last_updated": "2026-01-19T19:10:05Z",
-      "last_synced": "2026-01-19T19:15:10.389485",
+      "last_updated": "2026-01-19T19:21:17Z",
+      "last_synced": "2026-01-19T19:27:22.019794",
       "operation": "cloned"
     },
     "netkiller/shell": {
@@ -166,8 +166,8 @@
     "donnemartin/system-design-primer": {
       "name": "system-design-primer",
       "codeberg_name": "system-design-primer",
-      "last_updated": "2026-01-19T19:15:07Z",
-      "last_synced": "2026-01-19T19:21:00.148651",
+      "last_updated": "2026-01-19T19:26:52Z",
+      "last_synced": "2026-01-19T19:27:31.924715",
       "operation": "cloned"
     },
     "MikeWang000000/Natter": {
@@ -179,8 +179,8 @@
     "anderspitman/awesome-tunneling": {
       "name": "awesome-tunneling",
       "codeberg_name": "awesome-tunneling",
-      "last_updated": "2026-01-19T18:59:07Z",
-      "last_synced": "2026-01-19T19:15:19.414256",
+      "last_updated": "2026-01-19T19:24:00Z",
+      "last_synced": "2026-01-19T19:27:35.422771",
       "operation": "cloned"
     },
     "itMrBoy/resumePolice": {
@@ -432,6 +432,13 @@
       "name": "Foundations-of-LLMs",
       "last_updated": "2026-01-19T17:34:43Z",
       "last_synced": "2026-01-19T17:41:29.836243",
+      "operation": "cloned"
+    },
+    "AniruddhaChattopadhyay/Books": {
+      "name": "Books",
+      "codeberg_name": "Books",
+      "last_updated": "2026-01-19T17:35:10Z",
+      "last_synced": "2026-01-19T19:27:26.852582",
       "operation": "cloned"
     }
   }
