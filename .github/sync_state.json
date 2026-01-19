@@ -435,13 +435,6 @@
       "last_updated": "2026-01-19T17:35:10Z",
       "last_synced": "2026-01-19T20:07:36.040823",
       "operation": "cloned"
-    },
-    "programthink/books": {
-      "name": "books",
-      "codeberg_name": "books",
-      "last_updated": "2026-01-19T11:31:50Z",
-      "last_synced": "2026-01-19T20:08:02.329108",
-      "operation": "cloned"
     }
   }
 }
