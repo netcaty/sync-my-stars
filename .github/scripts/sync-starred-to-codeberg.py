@@ -374,12 +374,33 @@ class SyncManager:
                 log(f"  设置远程失败: {output[:200]}")
                 return False
             
-            # 推送所有分支和标签
-            success, output = run_command(['git', 'push', '--mirror', 'codeberg'], cwd=repo_path)
-            if not success:
-                log(f"  推送失败: {output[:200]}")
-                return False
             
+            # 修复：使用专门的推送脚本
+            log(f"  推送到 Codeberg...")
+            push_script = f"""
+            #!/bin/bash
+            cd {repo_path}
+            # 推送所有分支（排除 pull request 等特殊引用）
+            git push codeberg --all --force
+            # 推送所有标签
+            git push codeberg --tags --force
+            """
+            
+            # 执行推送脚本
+            push_result = subprocess.run(
+                ['bash', '-c', push_script],
+                capture_output=True,
+                text=True
+            )
+            
+            if push_result.returncode != 0:
+                # 检查输出，如果是预期的错误则继续
+                if 'refs/pull/' in push_result.stderr:
+                    log(f"  推送完成（忽略 pull request 引用错误）")
+                else:
+                    log(f"  推送失败: {push_result.stderr[:300]}")
+                    return False
+
             # 更新状态记录
             self.state[repo_full_name] = {
                 'name': repo_name,
