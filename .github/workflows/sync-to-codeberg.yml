@@ -11,6 +11,11 @@ on:
         default: false
         type: boolean
 
+# 设置工作流权限（关键修改！）
+permissions:
+  contents: write  # 允许提交状态文件
+  actions: write   # 允许写入工作流
+
 jobs:
   sync-repos:
     runs-on: ubuntu-latest
@@ -29,7 +34,7 @@ jobs:
     
     - name: Run sync script
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_PAT  }}
         CODEBERG_USERNAME: ${{ secrets.CODEBERG_USERNAME }}
         CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
         FULL_SYNC: ${{ inputs.full_sync }}
