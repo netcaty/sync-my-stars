@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-07T07:07:31.953709",
+    "last_updated": "2026-06-08T07:36:06.213154",
     "total_repos": 79,
     "renamed_repos": 0
   },
@@ -8,24 +8,24 @@
     "NanmiCoder/MediaCrawler": {
       "name": "MediaCrawler",
       "codeberg_name": "MediaCrawler",
-      "last_updated": "2026-06-07T06:45:56Z",
-      "last_synced": "2026-06-07T07:04:21.194506",
+      "last_updated": "2026-06-08T07:24:31Z",
+      "last_synced": "2026-06-08T07:29:56.868728",
       "operation": "cloned",
       "renamed": false
     },
     "janeczku/calibre-web": {
       "name": "calibre-web",
       "codeberg_name": "calibre-web",
-      "last_updated": "2026-06-07T05:48:15Z",
-      "last_synced": "2026-06-07T07:05:35.311936",
+      "last_updated": "2026-06-08T07:10:36Z",
+      "last_synced": "2026-06-08T07:31:16.005313",
       "operation": "cloned",
       "renamed": false
     },
     "garethgeorge/backrest": {
       "name": "backrest",
       "codeberg_name": "garethgeorge-backrest",
-      "last_updated": "2026-06-07T04:10:39Z",
-      "last_synced": "2026-06-07T07:04:15.881305",
+      "last_updated": "2026-06-08T07:26:27Z",
+      "last_synced": "2026-06-08T07:29:51.367397",
       "operation": "cloned",
       "renamed": true
     },
@@ -38,32 +38,32 @@
     "trzsz/trzsz-ssh": {
       "name": "trzsz-ssh",
       "codeberg_name": "trzsz-ssh",
-      "last_updated": "2026-06-07T04:06:22Z",
-      "last_synced": "2026-06-07T07:04:36.081947",
+      "last_updated": "2026-06-08T07:18:36Z",
+      "last_synced": "2026-06-08T07:30:10.338856",
       "operation": "cloned",
       "renamed": false
     },
     "codepath/android_guides": {
       "name": "android_guides",
       "codeberg_name": "android_guides",
-      "last_updated": "2026-06-06T20:38:26Z",
-      "last_synced": "2026-06-07T07:07:27.191376",
+      "last_updated": "2026-06-08T00:10:10Z",
+      "last_synced": "2026-06-08T07:35:57.634801",
       "operation": "cloned",
       "renamed": false
     },
     "schollz/croc": {
       "name": "croc",
       "codeberg_name": "croc",
-      "last_updated": "2026-06-06T07:56:15Z",
-      "last_synced": "2026-06-07T07:03:37.222237",
+      "last_updated": "2026-06-08T07:11:22Z",
+      "last_synced": "2026-06-08T07:29:24.884521",
       "operation": "cloned",
       "renamed": false
     },
     "fffaraz/awesome-cpp": {
       "name": "awesome-cpp",
       "codeberg_name": "fffaraz-awesome-cpp",
-      "last_updated": "2026-06-07T06:36:51Z",
-      "last_synced": "2026-06-07T07:07:19.725834",
+      "last_updated": "2026-06-08T07:20:32Z",
+      "last_synced": "2026-06-08T07:35:53.206697",
       "operation": "cloned",
       "renamed": true
     },
@@ -78,24 +78,24 @@
     "ellisonleao/magictools": {
       "name": "magictools",
       "codeberg_name": "magictools",
-      "last_updated": "2026-06-07T06:10:18Z",
-      "last_synced": "2026-06-07T07:07:11.758411",
+      "last_updated": "2026-06-08T02:17:40Z",
+      "last_synced": "2026-06-08T07:35:49.028270",
       "operation": "cloned",
       "renamed": false
     },
     "psviderski/uncloud": {
       "name": "uncloud",
       "codeberg_name": "uncloud",
-      "last_updated": "2026-06-06T05:05:51Z",
-      "last_synced": "2026-06-06T06:29:36.495345",
+      "last_updated": "2026-06-08T06:34:47Z",
+      "last_synced": "2026-06-08T07:29:46.902522",
       "operation": "cloned",
       "renamed": false
     },
     "Ac-Wiki/Ac-Wiki": {
       "name": "Ac-Wiki",
       "codeberg_name": "Ac-Wiki-Ac-Wiki",
-      "last_updated": "2026-06-06T18:56:37Z",
-      "last_synced": "2026-06-07T07:03:46.492258",
+      "last_updated": "2026-06-08T00:11:12Z",
+      "last_synced": "2026-06-08T07:29:33.790322",
       "operation": "cloned",
       "renamed": true
     },
@@ -110,24 +110,24 @@
     "Vonng/ddia": {
       "name": "ddia",
       "codeberg_name": "ddia",
-      "last_updated": "2026-06-07T06:18:11Z",
-      "last_synced": "2026-06-07T07:06:39.229665",
+      "last_updated": "2026-06-08T04:13:41Z",
+      "last_synced": "2026-06-08T07:35:26.332045",
       "operation": "cloned",
       "renamed": false
     },
     "TheAlgorithms/Python": {
       "name": "Python",
       "codeberg_name": "TheAlgorithms-Python",
-      "last_updated": "2026-06-07T06:37:26Z",
-      "last_synced": "2026-06-07T07:06:33.750576",
+      "last_updated": "2026-06-08T07:21:28Z",
+      "last_synced": "2026-06-08T07:35:20.702789",
       "operation": "cloned",
       "renamed": true
     },
     "dspinellis/unix-history-repo": {
       "name": "unix-history-repo",
       "codeberg_name": "unix-history-repo",
-      "last_updated": "2026-06-04T22:01:00Z",
-      "last_synced": "2026-06-05T07:10:27.968313",
+      "last_updated": "2026-06-07T08:37:10Z",
+      "last_synced": "2026-06-08T07:34:24.583624",
       "operation": "cloned",
       "renamed": false
     },
@@ -150,8 +150,8 @@
     "codecrafters-io/build-your-own-x": {
       "name": "build-your-own-x",
       "codeberg_name": "build-your-own-x",
-      "last_updated": "2026-06-07T07:02:44Z",
-      "last_synced": "2026-06-07T07:06:18.132272",
+      "last_updated": "2026-06-08T07:14:24Z",
+      "last_synced": "2026-06-08T07:35:03.253709",
       "operation": "cloned",
       "renamed": false
     },
@@ -206,8 +206,8 @@
     "donnemartin/system-design-primer": {
       "name": "system-design-primer",
       "codeberg_name": "system-design-primer",
-      "last_updated": "2026-06-07T06:57:26Z",
-      "last_synced": "2026-06-07T07:05:54.747057",
+      "last_updated": "2026-06-08T07:24:26Z",
+      "last_synced": "2026-06-08T07:34:34.352849",
       "operation": "cloned",
       "renamed": false
     },
@@ -222,24 +222,24 @@
     "anderspitman/awesome-tunneling": {
       "name": "awesome-tunneling",
       "codeberg_name": "awesome-tunneling",
-      "last_updated": "2026-06-06T11:39:16Z",
-      "last_synced": "2026-06-07T07:04:30.150192",
+      "last_updated": "2026-06-08T04:14:37Z",
+      "last_synced": "2026-06-08T07:30:06.589684",
       "operation": "cloned",
       "renamed": false
     },
     "itMrBoy/resumePolice": {
       "name": "resumePolice",
       "codeberg_name": "resumePolice",
-      "last_updated": "2026-06-06T11:49:59Z",
-      "last_synced": "2026-06-07T07:03:41.113547",
+      "last_updated": "2026-06-08T03:23:21Z",
+      "last_synced": "2026-06-08T07:29:28.362323",
       "operation": "cloned",
       "renamed": false
     },
     "jpillora/chisel": {
       "name": "chisel",
       "codeberg_name": "chisel",
-      "last_updated": "2026-06-07T04:16:44Z",
-      "last_synced": "2026-06-07T07:03:50.218167",
+      "last_updated": "2026-06-08T06:46:33Z",
+      "last_synced": "2026-06-08T07:29:37.505317",
       "operation": "cloned",
       "renamed": false
     },
@@ -262,8 +262,8 @@
     "nonstriater/Learn-Algorithms": {
       "name": "Learn-Algorithms",
       "codeberg_name": "Learn-Algorithms",
-      "last_updated": "2026-06-07T06:14:35Z",
-      "last_synced": "2026-06-07T07:07:08.236173",
+      "last_updated": "2026-06-08T02:06:36Z",
+      "last_synced": "2026-06-08T07:35:45.417802",
       "operation": "cloned",
       "renamed": false
     },
@@ -278,8 +278,8 @@
     "undergroundwires/privacy.sexy": {
       "name": "privacy.sexy",
       "codeberg_name": "privacy.sexy",
-      "last_updated": "2026-06-06T20:40:00Z",
-      "last_synced": "2026-06-07T07:04:26.630389",
+      "last_updated": "2026-06-08T06:57:02Z",
+      "last_synced": "2026-06-08T07:30:02.746241",
       "operation": "cloned",
       "renamed": false
     },
@@ -308,32 +308,32 @@
     "EmbraceAGI/awesome-chatgpt-zh": {
       "name": "awesome-chatgpt-zh",
       "codeberg_name": "awesome-chatgpt-zh",
-      "last_updated": "2026-06-07T06:45:32Z",
-      "last_synced": "2026-06-07T07:05:41.543696",
+      "last_updated": "2026-06-08T02:19:43Z",
+      "last_synced": "2026-06-08T07:31:22.375517",
       "operation": "cloned",
       "renamed": false
     },
     "pingcap/awesome-database-learning": {
       "name": "awesome-database-learning",
       "codeberg_name": "awesome-database-learning",
-      "last_updated": "2026-06-06T20:29:48Z",
-      "last_synced": "2026-06-07T07:05:58.223414",
+      "last_updated": "2026-06-08T07:15:51Z",
+      "last_synced": "2026-06-08T07:34:37.870726",
       "operation": "cloned",
       "renamed": false
     },
     "kilimchoi/engineering-blogs": {
       "name": "engineering-blogs",
       "codeberg_name": "engineering-blogs",
-      "last_updated": "2026-06-07T03:53:44Z",
-      "last_synced": "2026-06-07T07:05:48.994046",
+      "last_updated": "2026-06-08T06:50:09Z",
+      "last_synced": "2026-06-08T07:34:28.501988",
       "operation": "cloned",
       "renamed": false
     },
     "practical-tutorials/project-based-learning": {
       "name": "project-based-learning",
       "codeberg_name": "project-based-learning",
-      "last_updated": "2026-06-07T06:46:04Z",
-      "last_synced": "2026-06-07T07:06:14.310070",
+      "last_updated": "2026-06-08T07:24:31Z",
+      "last_synced": "2026-06-08T07:34:58.690558",
       "operation": "cloned",
       "renamed": false
     },
@@ -346,16 +346,16 @@
     "salomonelli/best-resume-ever": {
       "name": "best-resume-ever",
       "codeberg_name": "best-resume-ever",
-      "last_updated": "2026-06-06T13:42:45Z",
-      "last_synced": "2026-06-07T07:06:50.275200",
+      "last_updated": "2026-06-08T03:46:02Z",
+      "last_synced": "2026-06-08T07:35:37.904735",
       "operation": "cloned",
       "renamed": false
     },
     "ehang-io/nps": {
       "name": "nps",
       "codeberg_name": "nps",
-      "last_updated": "2026-06-07T05:12:06Z",
-      "last_synced": "2026-06-07T07:06:02.122770",
+      "last_updated": "2026-06-08T03:27:08Z",
+      "last_synced": "2026-06-08T07:34:41.915293",
       "operation": "cloned",
       "renamed": false
     },
@@ -368,16 +368,16 @@
     "gzc/CLRS": {
       "name": "CLRS",
       "codeberg_name": "gzc-CLRS",
-      "last_updated": "2026-06-07T04:02:08Z",
-      "last_synced": "2026-06-07T07:07:04.286186",
+      "last_updated": "2026-06-08T07:12:38Z",
+      "last_synced": "2026-06-08T07:35:41.724000",
       "operation": "cloned",
       "renamed": true
     },
     "aosabook/500lines": {
       "name": "500lines",
       "codeberg_name": "500lines",
-      "last_updated": "2026-06-07T05:34:58Z",
-      "last_synced": "2026-06-07T07:06:10.559471",
+      "last_updated": "2026-06-08T01:34:58Z",
+      "last_synced": "2026-06-08T07:34:54.582544",
       "operation": "cloned",
       "renamed": false
     },
@@ -392,32 +392,32 @@
     "CodingDocs/awesome-cs": {
       "name": "awesome-cs",
       "codeberg_name": "awesome-cs",
-      "last_updated": "2026-06-03T16:04:35Z",
-      "last_synced": "2026-06-04T07:25:08.727499",
+      "last_updated": "2026-06-08T04:17:58Z",
+      "last_synced": "2026-06-08T07:34:45.570366",
       "operation": "cloned",
       "renamed": false
     },
     "prakhar1989/awesome-courses": {
       "name": "awesome-courses",
       "codeberg_name": "awesome-courses",
-      "last_updated": "2026-06-07T06:36:28Z",
-      "last_synced": "2026-06-07T07:07:30.952360",
+      "last_updated": "2026-06-08T06:53:13Z",
+      "last_synced": "2026-06-08T07:36:01.366267",
       "operation": "cloned",
       "renamed": false
     },
     "it-ebooks-0/geektime-books": {
       "name": "geektime-books",
       "codeberg_name": "geektime-books",
-      "last_updated": "2026-06-07T06:51:00Z",
-      "last_synced": "2026-06-07T07:05:24.794771",
+      "last_updated": "2026-06-08T06:20:29Z",
+      "last_synced": "2026-06-08T07:31:05.408901",
       "operation": "cloned",
       "renamed": false
     },
     "izackwu/TeachYourselfCS-CN": {
       "name": "TeachYourselfCS-CN",
       "codeberg_name": "TeachYourselfCS-CN",
-      "last_updated": "2026-06-06T19:39:22Z",
-      "last_synced": "2026-06-07T07:06:05.543089",
+      "last_updated": "2026-06-08T05:32:22Z",
+      "last_synced": "2026-06-08T07:34:49.196229",
       "operation": "cloned",
       "renamed": false
     },
@@ -462,8 +462,8 @@
     "Neirth/FreeNOS": {
       "name": "FreeNOS",
       "codeberg_name": "FreeNOS",
-      "last_updated": "2026-05-26T20:04:29Z",
-      "last_synced": "2026-05-27T07:28:24.973633",
+      "last_updated": "2026-06-08T03:31:02Z",
+      "last_synced": "2026-06-08T07:36:05.211116",
       "operation": "cloned",
       "renamed": false
     },
@@ -518,72 +518,72 @@
     "ossu/computer-science": {
       "name": "computer-science",
       "codeberg_name": "computer-science",
-      "last_updated": "2026-06-07T07:01:41Z",
-      "last_synced": "2026-06-07T07:03:26.723320",
+      "last_updated": "2026-06-08T06:43:21Z",
+      "last_synced": "2026-06-08T07:29:08.919582",
       "operation": "cloned",
       "renamed": false
     },
     "ZJU-LLMs/Foundations-of-LLMs": {
       "name": "Foundations-of-LLMs",
       "codeberg_name": "Foundations-of-LLMs",
-      "last_updated": "2026-06-07T03:27:44Z",
-      "last_synced": "2026-06-07T07:03:32.188882",
+      "last_updated": "2026-06-08T04:14:05Z",
+      "last_synced": "2026-06-08T07:29:19.768129",
       "operation": "cloned",
       "renamed": false
     },
     "AniruddhaChattopadhyay/Books": {
       "name": "Books",
       "codeberg_name": "Books",
-      "last_updated": "2026-06-06T03:09:33Z",
-      "last_synced": "2026-06-06T06:28:40.594373",
+      "last_updated": "2026-06-07T08:42:17Z",
+      "last_synced": "2026-06-08T07:29:14.385134",
       "operation": "cloned",
       "renamed": false
     },
     "programthink/books": {
       "name": "books",
       "codeberg_name": "programthink-books",
-      "last_updated": "2026-06-07T06:02:56Z",
-      "last_synced": "2026-06-07T07:06:43.238596",
+      "last_updated": "2026-06-08T06:32:31Z",
+      "last_synced": "2026-06-08T07:35:30.370363",
       "operation": "cloned",
       "renamed": true
     },
     "wechat-article/wechat-article-exporter": {
       "name": "wechat-article-exporter",
       "codeberg_name": "wechat-article-exporter",
-      "last_updated": "2026-06-07T06:42:10Z",
-      "last_synced": "2026-06-07T07:03:21.982616",
+      "last_updated": "2026-06-08T07:19:54Z",
+      "last_synced": "2026-06-08T07:29:04.121621",
       "operation": "cloned",
       "renamed": false
     },
     "SukunaShinmyoumaru-hust/Hust-opensource-Xuejie": {
       "name": "Hust-opensource-Xuejie",
       "codeberg_name": "Hust-opensource-Xuejie",
-      "last_updated": "2026-06-05T14:53:34Z",
-      "last_synced": "2026-06-06T06:28:25.307977",
+      "last_updated": "2026-06-07T12:56:32Z",
+      "last_synced": "2026-06-08T07:28:59.481101",
       "operation": "cloned",
       "renamed": false
     },
     "memstechtips/Winhance": {
       "name": "Winhance",
       "codeberg_name": "Winhance",
-      "last_updated": "2026-06-07T06:44:18Z",
-      "last_synced": "2026-06-07T07:03:10.330726",
+      "last_updated": "2026-06-08T05:31:41Z",
+      "last_synced": "2026-06-08T07:27:28.936576",
       "operation": "cloned",
       "renamed": false
     },
     "ChrisTitusTech/winutil": {
       "name": "winutil",
       "codeberg_name": "ChrisTitusTech-winutil",
-      "last_updated": "2026-06-07T07:02:31Z",
-      "last_synced": "2026-06-07T07:03:17.348825",
+      "last_updated": "2026-06-08T06:20:27Z",
+      "last_synced": "2026-06-08T07:27:34.501918",
       "operation": "cloned",
       "renamed": true
     },
     "go-gost/gost": {
       "name": "gost",
       "codeberg_name": "gost",
-      "last_updated": "2026-06-07T03:34:52Z",
-      "last_synced": "2026-06-07T07:02:56.689041",
+      "last_updated": "2026-06-08T05:00:20Z",
+      "last_synced": "2026-06-08T07:27:18.336795",
       "operation": "cloned",
       "renamed": false
     },
@@ -598,8 +598,8 @@
     "rathole-org/rathole": {
       "name": "rathole",
       "codeberg_name": "rathole",
-      "last_updated": "2026-06-06T22:51:33Z",
-      "last_synced": "2026-06-07T07:03:00.285269",
+      "last_updated": "2026-06-08T05:11:15Z",
+      "last_synced": "2026-06-08T07:27:22.019345",
       "operation": "cloned",
       "renamed": false
     },
@@ -614,8 +614,8 @@
     "microsoft/RustTraining": {
       "name": "RustTraining",
       "codeberg_name": "RustTraining",
-      "last_updated": "2026-06-07T06:15:13Z",
-      "last_synced": "2026-06-07T07:02:50.201350",
+      "last_updated": "2026-06-08T06:54:52Z",
+      "last_synced": "2026-06-08T07:27:14.130935",
       "operation": "cloned",
       "renamed": false
     }
