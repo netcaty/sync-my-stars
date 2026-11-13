@@ -292,7 +292,9 @@ class SyncManager:
         original_name = repo_info['name']
         
         # 本地目录使用原始仓库名
-        repo_path = self.repos_dir / original_name
+        # repo_path = self.repos_dir / original_name
+        safe_name = repo_full_name.replace('/', '__')
+        repo_path = self.repos_dir / safe_name
         
         try:
             # 克隆或更新
