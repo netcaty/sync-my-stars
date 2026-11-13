@@ -93,7 +93,7 @@ class SyncManager:
         }
 
         self.codeberg_headers = {
-            'Authorization': f'Bearer {self.codeberg_token}',
+            'Authorization': f'token {self.codeberg_token}',
             'Content-Type': 'application/json'
         }
 
@@ -255,7 +255,7 @@ class SyncManager:
 
     def codeberg_repo_exists(self, repo_name: str) -> bool:
         """检查Codeberg上是否已存在仓库"""
-        url = f"https://api.cnb.cool/{self.codeberg_username}/{repo_name}"
+        url = f"https://codeberg.org/api/v1/repos/{self.codeberg_username}/{repo_name}"
         try:
             response = requests.get(
                 url,
@@ -269,7 +269,7 @@ class SyncManager:
 
     def create_codeberg_repo(self, repo_name: str, description: str = "") -> bool:
         """在Codeberg上创建仓库"""
-        url = f"https://api.cnb.cool/{self.codeberg_username}/-/repos"
+        url = "https://codeberg.org/api/v1/user/repos"
         data = {
             'name': repo_name,
             'description': description[:255] if description else "GitHub mirror",
@@ -356,7 +356,7 @@ class SyncManager:
                 is_renamed = False
 
             # 设置远程
-            codeberg_url = f"https://cnb:{self.codeberg_token}@cnb.cool/{self.codeberg_username}/{codeberg_name}.git"
+            codeberg_url = f"https://{self.codeberg_username}:{self.codeberg_token}@codeberg.org/{self.codeberg_username}/{codeberg_name}.git"
 
             success, output = run_command(['git', 'remote'], cwd=repo_path)
             if success:
