@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-14T00:35:51.183727",
+    "last_updated": "2026-11-14T02:10:37.712912",
     "total_repos": 86,
     "renamed_repos": 0
   },
@@ -347,11 +347,11 @@
     "EmbraceAGI/awesome-chatgpt-zh": {
       "name": "awesome-chatgpt-zh",
       "codeberg_name": "awesome-chatgpt-zh",
-      "last_updated": "2026-11-13T09:53:04Z",
-      "last_synced": "2026-11-13T10:37:56.928493",
+      "last_pushed": "2026-11-14T01:21:57Z",
+      "last_updated": "2026-11-13T19:30:59Z",
+      "last_synced": "2026-11-14T02:10:36.710071",
       "operation": "cloned",
-      "renamed": false,
-      "last_pushed": "2026-11-13T01:21:50Z"
+      "renamed": false
     },
     "pingcap/awesome-database-learning": {
       "name": "awesome-database-learning",
