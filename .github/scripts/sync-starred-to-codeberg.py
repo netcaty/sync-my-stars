@@ -449,7 +449,7 @@ class SyncManager:
             new_codeberg_name = f"{new_codeberg_name}-{hash_suffix}"
 
         # 更新远程URL
-        new_codeberg_url = f"https://cnb:{self.codeberg_token}@cnb.cool/{self.codeberg_username}/{new_codeberg_name}.git"
+        new_codeberg_url = f"https://{self.codeberg_username}:{self.codeberg_token}@codeberg.org/{self.codeberg_username}/{codeberg_name}.git"
         run_command(['git', 'remote', 'set-url', 'codeberg', new_codeberg_url], cwd=repo_path)
 
         # 创建新仓库并推送
