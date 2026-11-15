@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-14T09:45:17.494403",
+    "last_updated": "2026-11-15T10:15:55.668077",
     "total_repos": 86,
     "renamed_repos": 0
   },
@@ -8,11 +8,11 @@
     "NanmiCoder/MediaCrawler": {
       "name": "MediaCrawler",
       "codeberg_name": "NanmiCoder-MediaCrawler",
-      "last_updated": "2026-11-13T10:09:35Z",
-      "last_synced": "2026-11-13T10:36:57.440517",
+      "last_pushed": "2026-11-15T06:20:45Z",
+      "last_updated": "2026-11-15T10:06:08Z",
+      "last_synced": "2026-11-15T10:14:42.510031",
       "operation": "cloned",
-      "renamed": true,
-      "last_pushed": "2026-11-09T02:56:57Z"
+      "renamed": true
     },
     "janeczku/calibre-web": {
       "name": "calibre-web",
@@ -35,11 +35,11 @@
     "netcaty/ctrl-q": {
       "name": "ctrl-q",
       "codeberg_name": "ctrl-q",
+      "last_pushed": "2026-11-15T02:31:43Z",
       "last_updated": "2026-09-01T02:03:02Z",
-      "last_synced": "2026-09-01T08:22:34.230835",
+      "last_synced": "2026-11-15T10:14:19.203090",
       "operation": "cloned",
-      "renamed": false,
-      "last_pushed": "2026-01-17T17:43:36Z"
+      "renamed": false
     },
     "trzsz/trzsz-ssh": {
       "name": "trzsz-ssh",
@@ -125,9 +125,9 @@
     "Vonng/ddia": {
       "name": "ddia",
       "codeberg_name": "ddia",
-      "last_pushed": "2026-11-14T00:27:27Z",
-      "last_updated": "2026-11-13T15:25:42Z",
-      "last_synced": "2026-11-14T00:35:50.182083",
+      "last_pushed": "2026-11-15T00:30:29Z",
+      "last_updated": "2026-11-15T07:57:56Z",
+      "last_synced": "2026-11-15T10:15:38.503506",
       "operation": "cloned",
       "renamed": false
     },
@@ -152,18 +152,18 @@
     "digitalgust/miniJVM": {
       "name": "miniJVM",
       "codeberg_name": "miniJVM",
-      "last_pushed": "2026-11-14T03:40:53Z",
+      "last_pushed": "2026-11-15T06:56:55Z",
       "last_updated": "2026-11-13T20:38:22Z",
-      "last_synced": "2026-11-14T09:45:16.491871",
+      "last_synced": "2026-11-15T10:15:54.666372",
       "operation": "cloned",
       "renamed": false
     },
     "UllrAI/SaaS-Starter": {
       "name": "SaaS-Starter",
       "codeberg_name": "UllrAI-SaaS-Starter",
-      "last_pushed": "2026-11-14T09:14:29Z",
+      "last_pushed": "2026-11-14T14:18:15Z",
       "last_updated": "2026-11-09T19:52:42Z",
-      "last_synced": "2026-11-14T09:44:43.186479",
+      "last_synced": "2026-11-15T10:14:33.558174",
       "operation": "cloned",
       "renamed": true
     },
@@ -347,9 +347,9 @@
     "EmbraceAGI/awesome-chatgpt-zh": {
       "name": "awesome-chatgpt-zh",
       "codeberg_name": "awesome-chatgpt-zh",
-      "last_pushed": "2026-11-14T01:21:57Z",
-      "last_updated": "2026-11-13T19:30:59Z",
-      "last_synced": "2026-11-14T02:10:36.710071",
+      "last_pushed": "2026-11-15T01:21:27Z",
+      "last_updated": "2026-11-15T09:46:08Z",
+      "last_synced": "2026-11-15T10:15:14.660036",
       "operation": "cloned",
       "renamed": false
     },
