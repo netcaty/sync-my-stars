@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-16T10:30:01.605259",
+    "last_updated": "2026-11-17T11:29:41.274566",
     "total_repos": 86,
     "renamed_repos": 0
   },
@@ -8,9 +8,9 @@
     "NanmiCoder/MediaCrawler": {
       "name": "MediaCrawler",
       "codeberg_name": "NanmiCoder-MediaCrawler",
-      "last_pushed": "2026-11-15T06:20:45Z",
-      "last_updated": "2026-11-15T10:06:08Z",
-      "last_synced": "2026-11-15T10:14:42.510031",
+      "last_pushed": "2026-11-17T07:19:54Z",
+      "last_updated": "2026-11-17T10:37:15Z",
+      "last_synced": "2026-11-17T11:27:45.704714",
       "operation": "cloned",
       "renamed": true
     },
@@ -62,9 +62,9 @@
     "schollz/croc": {
       "name": "croc",
       "codeberg_name": "schollz-croc",
-      "last_pushed": "2026-11-16T08:33:27Z",
-      "last_updated": "2026-11-16T09:18:38Z",
-      "last_synced": "2026-11-16T10:28:08.970722",
+      "last_pushed": "2026-11-16T21:37:22Z",
+      "last_updated": "2026-11-17T10:54:28Z",
+      "last_synced": "2026-11-17T11:26:50.131430",
       "operation": "cloned",
       "renamed": true
     },
@@ -89,20 +89,20 @@
     "ellisonleao/magictools": {
       "name": "magictools",
       "codeberg_name": "magictools",
-      "last_pushed": "2026-11-13T14:05:55Z",
-      "last_updated": "2026-11-13T22:02:34Z",
-      "last_synced": "2026-11-14T00:05:28.206254",
+      "last_pushed": "2026-11-16T18:48:20Z",
+      "last_updated": "2026-11-17T10:32:39Z",
+      "last_synced": "2026-11-17T11:29:40.273087",
       "operation": "cloned",
       "renamed": false
     },
     "psviderski/uncloud": {
       "name": "uncloud",
       "codeberg_name": "uncloud",
-      "last_updated": "2026-11-12T10:13:42Z",
-      "last_synced": "2026-11-12T10:54:18.192702",
+      "last_pushed": "2026-11-17T05:37:46Z",
+      "last_updated": "2026-11-17T01:00:46Z",
+      "last_synced": "2026-11-17T11:27:28.671486",
       "operation": "cloned",
-      "renamed": false,
-      "last_pushed": "2026-11-06T11:22:23Z"
+      "renamed": false
     },
     "Ac-Wiki/Ac-Wiki": {
       "name": "Ac-Wiki",
@@ -125,9 +125,9 @@
     "Vonng/ddia": {
       "name": "ddia",
       "codeberg_name": "ddia",
-      "last_pushed": "2026-11-16T00:34:11Z",
-      "last_updated": "2026-11-16T08:53:16Z",
-      "last_synced": "2026-11-16T10:29:43.151420",
+      "last_pushed": "2026-11-17T00:28:29Z",
+      "last_updated": "2026-11-17T10:12:39Z",
+      "last_synced": "2026-11-17T11:29:13.683879",
       "operation": "cloned",
       "renamed": false
     },
@@ -152,9 +152,9 @@
     "digitalgust/miniJVM": {
       "name": "miniJVM",
       "codeberg_name": "miniJVM",
-      "last_pushed": "2026-11-16T00:08:16Z",
+      "last_pushed": "2026-11-16T11:21:35Z",
       "last_updated": "2026-11-13T20:38:22Z",
-      "last_synced": "2026-11-16T10:30:00.603771",
+      "last_synced": "2026-11-17T11:29:29.241107",
       "operation": "cloned",
       "renamed": false
     },
@@ -170,11 +170,11 @@
     "codecrafters-io/build-your-own-x": {
       "name": "build-your-own-x",
       "codeberg_name": "build-your-own-x",
-      "last_updated": "2026-11-13T10:23:29Z",
-      "last_synced": "2026-11-13T10:38:30.389732",
+      "last_pushed": "2026-11-17T08:53:01Z",
+      "last_updated": "2026-11-17T11:15:05Z",
+      "last_synced": "2026-11-17T11:28:58.948680",
       "operation": "cloned",
-      "renamed": false,
-      "last_pushed": "2026-11-08T16:38:15Z"
+      "renamed": false
     },
     "netkiller/shell": {
       "name": "shell",
@@ -347,9 +347,9 @@
     "EmbraceAGI/awesome-chatgpt-zh": {
       "name": "awesome-chatgpt-zh",
       "codeberg_name": "awesome-chatgpt-zh",
-      "last_pushed": "2026-11-16T01:25:21Z",
-      "last_updated": "2026-11-16T03:45:35Z",
-      "last_synced": "2026-11-16T10:29:10.935335",
+      "last_pushed": "2026-11-17T01:23:21Z",
+      "last_updated": "2026-11-17T09:21:32Z",
+      "last_synced": "2026-11-17T11:28:36.115621",
       "operation": "cloned",
       "renamed": false
     },
@@ -651,9 +651,9 @@
     "ChrisTitusTech/winutil": {
       "name": "winutil",
       "codeberg_name": "ChrisTitusTech-winutil",
-      "last_pushed": "2026-11-15T18:56:20Z",
-      "last_updated": "2026-11-16T10:05:29Z",
-      "last_synced": "2026-11-16T10:27:58.145009",
+      "last_pushed": "2026-11-16T19:56:15Z",
+      "last_updated": "2026-11-17T10:48:18Z",
+      "last_synced": "2026-11-17T11:26:14.248108",
       "operation": "cloned",
       "renamed": true
     },
