@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-19T11:03:52.631234",
+    "last_updated": "2026-11-20T10:52:07.929141",
     "total_repos": 86,
     "renamed_repos": 0
   },
@@ -26,11 +26,11 @@
     "garethgeorge/backrest": {
       "name": "backrest",
       "codeberg_name": "garethgeorge-backrest",
-      "last_updated": "2026-11-13T10:24:17Z",
-      "last_synced": "2026-11-13T10:36:52.090169",
+      "last_pushed": "2026-11-20T05:43:10Z",
+      "last_updated": "2026-11-20T10:14:07Z",
+      "last_synced": "2026-11-20T10:50:32.825493",
       "operation": "cloned",
-      "renamed": true,
-      "last_pushed": "2026-09-21T13:26:46Z"
+      "renamed": true
     },
     "netcaty/ctrl-q": {
       "name": "ctrl-q",
@@ -71,11 +71,11 @@
     "fffaraz/awesome-cpp": {
       "name": "awesome-cpp",
       "codeberg_name": "fffaraz-awesome-cpp",
-      "last_updated": "2026-11-13T09:56:46Z",
-      "last_synced": "2026-11-13T10:39:27.130321",
+      "last_pushed": "2026-11-20T04:55:36Z",
+      "last_updated": "2026-11-20T10:16:42Z",
+      "last_synced": "2026-11-20T10:52:06.926531",
       "operation": "cloned",
-      "renamed": true,
-      "last_pushed": "2026-11-11T06:27:28Z"
+      "renamed": true
     },
     "ethen8181/machine-learning": {
       "name": "machine-learning",
@@ -89,9 +89,9 @@
     "ellisonleao/magictools": {
       "name": "magictools",
       "codeberg_name": "magictools",
-      "last_pushed": "2026-11-18T18:50:53Z",
-      "last_updated": "2026-11-19T09:41:21Z",
-      "last_synced": "2026-11-19T11:03:51.629816",
+      "last_pushed": "2026-11-19T21:32:11Z",
+      "last_updated": "2026-11-20T10:18:39Z",
+      "last_synced": "2026-11-20T10:51:52.882670",
       "operation": "cloned",
       "renamed": false
     },
@@ -125,9 +125,9 @@
     "Vonng/ddia": {
       "name": "ddia",
       "codeberg_name": "ddia",
-      "last_pushed": "2026-11-19T00:28:59Z",
-      "last_updated": "2026-11-19T07:28:51Z",
-      "last_synced": "2026-11-19T11:03:24.600832",
+      "last_pushed": "2026-11-20T00:26:17Z",
+      "last_updated": "2026-11-20T07:57:20Z",
+      "last_synced": "2026-11-20T10:51:20.002259",
       "operation": "cloned",
       "renamed": false
     },
@@ -152,9 +152,9 @@
     "digitalgust/miniJVM": {
       "name": "miniJVM",
       "codeberg_name": "miniJVM",
-      "last_pushed": "2026-11-19T04:19:31Z",
-      "last_updated": "2026-11-13T20:38:22Z",
-      "last_synced": "2026-11-19T11:03:36.038601",
+      "last_pushed": "2026-11-20T02:42:28Z",
+      "last_updated": "2026-11-19T20:36:21Z",
+      "last_synced": "2026-11-20T10:51:38.125633",
       "operation": "cloned",
       "renamed": false
     },
@@ -347,9 +347,9 @@
     "EmbraceAGI/awesome-chatgpt-zh": {
       "name": "awesome-chatgpt-zh",
       "codeberg_name": "awesome-chatgpt-zh",
-      "last_pushed": "2026-11-19T01:21:55Z",
-      "last_updated": "2026-11-19T10:36:40Z",
-      "last_synced": "2026-11-19T11:02:46.729006",
+      "last_pushed": "2026-11-20T01:22:01Z",
+      "last_updated": "2026-11-20T10:12:56Z",
+      "last_synced": "2026-11-20T10:51:04.729471",
       "operation": "cloned",
       "renamed": false
     },
