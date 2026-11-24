@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-23T11:38:00.502697",
+    "last_updated": "2026-11-24T13:10:43.025559",
     "total_repos": 86,
     "renamed_repos": 0
   },
@@ -89,18 +89,18 @@
     "ellisonleao/magictools": {
       "name": "magictools",
       "codeberg_name": "magictools",
-      "last_pushed": "2026-11-19T21:32:11Z",
-      "last_updated": "2026-11-20T10:18:39Z",
-      "last_synced": "2026-11-20T10:51:52.882670",
+      "last_pushed": "2026-11-23T17:30:32Z",
+      "last_updated": "2026-11-24T03:09:01Z",
+      "last_synced": "2026-11-24T13:10:42.024139",
       "operation": "cloned",
       "renamed": false
     },
     "psviderski/uncloud": {
       "name": "uncloud",
       "codeberg_name": "uncloud",
-      "last_pushed": "2026-11-17T05:37:46Z",
-      "last_updated": "2026-11-17T01:00:46Z",
-      "last_synced": "2026-11-17T11:27:28.671486",
+      "last_pushed": "2026-11-24T09:57:29Z",
+      "last_updated": "2026-11-23T21:53:32Z",
+      "last_synced": "2026-11-24T13:09:46.128633",
       "operation": "cloned",
       "renamed": false
     },
@@ -125,9 +125,9 @@
     "Vonng/ddia": {
       "name": "ddia",
       "codeberg_name": "ddia",
-      "last_pushed": "2026-11-23T00:30:47Z",
-      "last_updated": "2026-11-23T11:27:13Z",
-      "last_synced": "2026-11-23T11:37:59.501068",
+      "last_pushed": "2026-11-24T02:50:36Z",
+      "last_updated": "2026-11-24T03:34:34Z",
+      "last_synced": "2026-11-24T13:10:35.264637",
       "operation": "cloned",
       "renamed": false
     },
@@ -305,11 +305,11 @@
     "anyant/rssant": {
       "name": "rssant",
       "codeberg_name": "rssant",
-      "last_updated": "2026-11-10T13:20:27Z",
-      "last_synced": "2026-11-11T10:26:02.930791",
+      "last_pushed": "2026-11-24T06:43:43Z",
+      "last_updated": "2026-11-19T16:44:35Z",
+      "last_synced": "2026-11-24T13:10:18.065292",
       "operation": "cloned",
-      "renamed": false,
-      "last_pushed": "2026-10-31T08:45:41Z"
+      "renamed": false
     },
     "undergroundwires/privacy.sexy": {
       "name": "privacy.sexy",
@@ -347,9 +347,9 @@
     "EmbraceAGI/awesome-chatgpt-zh": {
       "name": "awesome-chatgpt-zh",
       "codeberg_name": "awesome-chatgpt-zh",
-      "last_pushed": "2026-11-23T01:23:31Z",
-      "last_updated": "2026-11-23T07:31:12Z",
-      "last_synced": "2026-11-23T11:37:30.464236",
+      "last_pushed": "2026-11-24T01:22:43Z",
+      "last_updated": "2026-11-23T19:41:04Z",
+      "last_synced": "2026-11-24T13:10:25.231166",
       "operation": "cloned",
       "renamed": false
     },
