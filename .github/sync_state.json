@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-24T13:10:43.025559",
+    "last_updated": "2026-11-25T11:59:37.211212",
     "total_repos": 86,
     "renamed_repos": 0
   },
@@ -8,9 +8,9 @@
     "NanmiCoder/MediaCrawler": {
       "name": "MediaCrawler",
       "codeberg_name": "NanmiCoder-MediaCrawler",
-      "last_pushed": "2026-11-21T11:30:38Z",
-      "last_updated": "2026-11-22T10:16:57Z",
-      "last_synced": "2026-11-22T10:37:11.213195",
+      "last_pushed": "2026-11-25T07:19:11Z",
+      "last_updated": "2026-11-25T11:46:55Z",
+      "last_synced": "2026-11-25T11:58:58.390416",
       "operation": "cloned",
       "renamed": true
     },
@@ -89,9 +89,9 @@
     "ellisonleao/magictools": {
       "name": "magictools",
       "codeberg_name": "magictools",
-      "last_pushed": "2026-11-23T17:30:32Z",
-      "last_updated": "2026-11-24T03:09:01Z",
-      "last_synced": "2026-11-24T13:10:42.024139",
+      "last_pushed": "2026-11-24T19:36:42Z",
+      "last_updated": "2026-11-25T09:40:14Z",
+      "last_synced": "2026-11-25T11:59:36.209889",
       "operation": "cloned",
       "renamed": false
     },
@@ -125,9 +125,9 @@
     "Vonng/ddia": {
       "name": "ddia",
       "codeberg_name": "ddia",
-      "last_pushed": "2026-11-24T02:50:36Z",
-      "last_updated": "2026-11-24T03:34:34Z",
-      "last_synced": "2026-11-24T13:10:35.264637",
+      "last_pushed": "2026-11-25T00:28:18Z",
+      "last_updated": "2026-11-25T03:41:49Z",
+      "last_synced": "2026-11-25T11:59:31.993503",
       "operation": "cloned",
       "renamed": false
     },
@@ -305,9 +305,9 @@
     "anyant/rssant": {
       "name": "rssant",
       "codeberg_name": "rssant",
-      "last_pushed": "2026-11-24T06:43:43Z",
+      "last_pushed": "2026-11-24T17:43:32Z",
       "last_updated": "2026-11-19T16:44:35Z",
-      "last_synced": "2026-11-24T13:10:18.065292",
+      "last_synced": "2026-11-25T11:59:20.385799",
       "operation": "cloned",
       "renamed": false
     },
@@ -347,9 +347,9 @@
     "EmbraceAGI/awesome-chatgpt-zh": {
       "name": "awesome-chatgpt-zh",
       "codeberg_name": "awesome-chatgpt-zh",
-      "last_pushed": "2026-11-24T01:22:43Z",
-      "last_updated": "2026-11-23T19:41:04Z",
-      "last_synced": "2026-11-24T13:10:25.231166",
+      "last_pushed": "2026-11-25T01:22:58Z",
+      "last_updated": "2026-11-25T10:24:01Z",
+      "last_synced": "2026-11-25T11:59:25.405492",
       "operation": "cloned",
       "renamed": false
     },
